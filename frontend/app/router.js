@@ -8,6 +8,8 @@ var Router = Ember.Router.extend({
 Router.map(function() {
   this.route('login');
   this.route('dashboard');
+  this.route('idea');
+  this.route('ideas');
 });
 
 export default Router;

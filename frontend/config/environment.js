@@ -46,14 +46,19 @@ module.exports = function(environment) {
   ENV.contentSecurityPolicy = {
     'connect-src': "*"
   }
-
   ENV['ember-simple-auth'] = {
-    base: {
-      store: 'session-store:local-storage',
-      routeAfterAuthentication: 'dashboard',
+    store: 'session-store:local-storage',
+    routeAfterAuthentication: 'dashboard',
       routeIfAlreadyAuthenticated: 'dashboard'
-    }
   }
+  // ENV['ember-simple-auth'] = {
+  //   // { base: { store: 'session-store:local-store' }}
+  //   base: {
+  //     // store: 'session-store:local-storage'
+  //     routeAfterAuthentication: 'dashboard',
+  //     routeIfAlreadyAuthenticated: 'dashboard'
+  //   }
+  // }
 
   return ENV;
 };
