@@ -1,5 +1,8 @@
-HERE ARE YOUR BEAUTIFUL IDEAS
-
+HERE ARE YOUR BEAUTIFUL IDEAS<br>
+{{#each ideaData as |idea|}}'
+	{{idea.id}}. {{idea.name}} - {{idea.description}} <br>
+	{{idea.created}}
+{{/each}}
 {{outlet}}
-BANNAS ARE BEAUTIFUL
-s
+<br>
+BANNAS ARE BEAUTIFULs

@@ -2043,3 +2043,354 @@ Processing by IdeasController#index as application/vnd.api+json
   [1m[35m (1.4ms)[0m  commit transaction
   [1m[36mIdea Load (0.2ms)[0m  [1mSELECT "ideas".* FROM "ideas"[0m
 Completed 200 OK in 9ms (Views: 0.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/ideas" for ::1 at 2015-10-07 21:27:40 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by IdeasController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2015-10-08 02:11:47.506621"], ["current_sign_in_at", "2015-10-08 02:27:40.419442"], ["current_sign_in_ip", "::1"], ["sign_in_count", 62], ["updated_at", "2015-10-08 02:27:40.420728"], ["id", 1]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mIdea Load (0.2ms)[0m  SELECT "ideas".* FROM "ideas"
+Completed 200 OK in 53ms (Views: 8.0ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/ideas" for 127.0.0.1 at 2015-10-07 21:28:07 -0500
+Processing by IdeasController#index as application/vnd.api+json
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2015-10-08 02:27:40.419442"], ["current_sign_in_at", "2015-10-08 02:28:07.157700"], ["last_sign_in_ip", "::1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 63], ["updated_at", "2015-10-08 02:28:07.158860"], ["id", 1]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36mIdea Load (0.2ms)[0m  [1mSELECT "ideas".* FROM "ideas"[0m
+Completed 200 OK in 9ms (Views: 1.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/ideas" for 127.0.0.1 at 2015-10-07 21:28:07 -0500
+Processing by IdeasController#index as application/vnd.api+json
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2015-10-08 02:28:07.157700"], ["current_sign_in_at", "2015-10-08 02:28:07.185897"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 64], ["updated_at", "2015-10-08 02:28:07.187196"], ["id", 1]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mIdea Load (0.3ms)[0m  SELECT "ideas".* FROM "ideas"
+Completed 200 OK in 10ms (Views: 1.0ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/ideas" for 127.0.0.1 at 2015-10-07 21:38:51 -0500
+Processing by IdeasController#index as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2015-10-08 02:28:07.185897"], ["current_sign_in_at", "2015-10-08 02:38:51.812704"], ["sign_in_count", 65], ["updated_at", "2015-10-08 02:38:51.814254"], ["id", 1]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT "ideas".* FROM "ideas"[0m
+Completed 200 OK in 14ms (Views: 1.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/ideas" for 127.0.0.1 at 2015-10-07 21:38:51 -0500
+Processing by IdeasController#index as JSON
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2015-10-08 02:38:51.812704"], ["current_sign_in_at", "2015-10-08 02:38:51.837333"], ["sign_in_count", 66], ["updated_at", "2015-10-08 02:38:51.838873"], ["id", 1]]
+  [1m[36m (63.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mIdea Load (0.3ms)[0m  SELECT "ideas".* FROM "ideas"
+Completed 200 OK in 71ms (Views: 1.0ms | ActiveRecord: 64.0ms)
+
+
+Started GET "/ideas" for 127.0.0.1 at 2015-10-07 21:40:38 -0500
+Processing by IdeasController#index as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2015-10-08 02:38:51.837333"], ["current_sign_in_at", "2015-10-08 02:40:38.043923"], ["sign_in_count", 67], ["updated_at", "2015-10-08 02:40:38.045485"], ["id", 1]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36mIdea Load (0.2ms)[0m  [1mSELECT "ideas".* FROM "ideas"[0m
+Completed 200 OK in 10ms (Views: 1.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/ideas" for 127.0.0.1 at 2015-10-07 21:40:38 -0500
+Processing by IdeasController#index as JSON
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2015-10-08 02:40:38.043923"], ["current_sign_in_at", "2015-10-08 02:40:38.201072"], ["sign_in_count", 68], ["updated_at", "2015-10-08 02:40:38.202181"], ["id", 1]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mIdea Load (0.2ms)[0m  SELECT "ideas".* FROM "ideas"
+Completed 200 OK in 9ms (Views: 0.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/ideas" for 127.0.0.1 at 2015-10-07 21:41:03 -0500
+Processing by IdeasController#index as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2015-10-08 02:40:38.201072"], ["current_sign_in_at", "2015-10-08 02:41:03.923519"], ["sign_in_count", 69], ["updated_at", "2015-10-08 02:41:03.924684"], ["id", 1]]
+  [1m[35m (55.4ms)[0m  commit transaction
+  [1m[36mIdea Load (2.2ms)[0m  [1mSELECT "ideas".* FROM "ideas"[0m
+Completed 200 OK in 67ms (Views: 1.8ms | ActiveRecord: 58.2ms)
+
+
+Started GET "/ideas" for 127.0.0.1 at 2015-10-07 21:41:04 -0500
+Processing by IdeasController#index as JSON
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2015-10-08 02:41:03.923519"], ["current_sign_in_at", "2015-10-08 02:41:04.017493"], ["sign_in_count", 70], ["updated_at", "2015-10-08 02:41:04.018782"], ["id", 1]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mIdea Load (0.2ms)[0m  SELECT "ideas".* FROM "ideas"
+Completed 200 OK in 15ms (Views: 1.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/ideas" for 127.0.0.1 at 2015-10-07 21:41:49 -0500
+Processing by IdeasController#index as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2015-10-08 02:41:04.017493"], ["current_sign_in_at", "2015-10-08 02:41:49.362443"], ["sign_in_count", 71], ["updated_at", "2015-10-08 02:41:49.363506"], ["id", 1]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36mIdea Load (0.2ms)[0m  [1mSELECT "ideas".* FROM "ideas"[0m
+Completed 200 OK in 7ms (Views: 0.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/ideas" for 127.0.0.1 at 2015-10-07 21:41:49 -0500
+Processing by IdeasController#index as JSON
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2015-10-08 02:41:49.362443"], ["current_sign_in_at", "2015-10-08 02:41:49.446143"], ["sign_in_count", 72], ["updated_at", "2015-10-08 02:41:49.447580"], ["id", 1]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mIdea Load (0.2ms)[0m  SELECT "ideas".* FROM "ideas"
+Completed 200 OK in 12ms (Views: 1.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/ideas" for 127.0.0.1 at 2015-10-07 21:42:41 -0500
+Processing by IdeasController#index as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2015-10-08 02:41:49.446143"], ["current_sign_in_at", "2015-10-08 02:42:41.243787"], ["sign_in_count", 73], ["updated_at", "2015-10-08 02:42:41.245373"], ["id", 1]]
+  [1m[35m (4.8ms)[0m  commit transaction
+  [1m[36mIdea Load (0.2ms)[0m  [1mSELECT "ideas".* FROM "ideas"[0m
+Completed 200 OK in 13ms (Views: 0.9ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/ideas" for 127.0.0.1 at 2015-10-07 21:42:41 -0500
+Processing by IdeasController#index as JSON
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2015-10-08 02:42:41.243787"], ["current_sign_in_at", "2015-10-08 02:42:41.272374"], ["sign_in_count", 74], ["updated_at", "2015-10-08 02:42:41.273847"], ["id", 1]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mIdea Load (0.2ms)[0m  SELECT "ideas".* FROM "ideas"
+Completed 200 OK in 21ms (Views: 1.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/ideas" for 127.0.0.1 at 2015-10-07 21:43:18 -0500
+Processing by IdeasController#index as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2015-10-08 02:42:41.272374"], ["current_sign_in_at", "2015-10-08 02:43:18.440639"], ["sign_in_count", 75], ["updated_at", "2015-10-08 02:43:18.443483"], ["id", 1]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36mIdea Load (0.2ms)[0m  [1mSELECT "ideas".* FROM "ideas"[0m
+Completed 200 OK in 13ms (Views: 1.1ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/ideas" for 127.0.0.1 at 2015-10-07 21:43:18 -0500
+Processing by IdeasController#index as JSON
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2015-10-08 02:43:18.440639"], ["current_sign_in_at", "2015-10-08 02:43:18.472313"], ["sign_in_count", 76], ["updated_at", "2015-10-08 02:43:18.477938"], ["id", 1]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mIdea Load (0.2ms)[0m  SELECT "ideas".* FROM "ideas"
+Completed 200 OK in 18ms (Views: 1.6ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/ideas" for 127.0.0.1 at 2015-10-07 21:44:51 -0500
+Processing by IdeasController#index as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2015-10-08 02:43:18.472313"], ["current_sign_in_at", "2015-10-08 02:44:51.575375"], ["sign_in_count", 77], ["updated_at", "2015-10-08 02:44:51.577070"], ["id", 1]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36mIdea Load (0.2ms)[0m  [1mSELECT "ideas".* FROM "ideas"[0m
+Completed 200 OK in 9ms (Views: 1.0ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/ideas" for 127.0.0.1 at 2015-10-07 21:44:51 -0500
+Processing by IdeasController#index as JSON
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2015-10-08 02:44:51.575375"], ["current_sign_in_at", "2015-10-08 02:44:51.603749"], ["sign_in_count", 78], ["updated_at", "2015-10-08 02:44:51.605325"], ["id", 1]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mIdea Load (0.2ms)[0m  SELECT "ideas".* FROM "ideas"
+Completed 200 OK in 9ms (Views: 1.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/ideas" for 127.0.0.1 at 2015-10-07 21:45:14 -0500
+Processing by IdeasController#index as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2015-10-08 02:44:51.603749"], ["current_sign_in_at", "2015-10-08 02:45:14.245799"], ["sign_in_count", 79], ["updated_at", "2015-10-08 02:45:14.247506"], ["id", 1]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36mIdea Load (0.3ms)[0m  [1mSELECT "ideas".* FROM "ideas"[0m
+Completed 200 OK in 10ms (Views: 1.0ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/ideas" for 127.0.0.1 at 2015-10-07 21:45:14 -0500
+Processing by IdeasController#index as JSON
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2015-10-08 02:45:14.245799"], ["current_sign_in_at", "2015-10-08 02:45:14.287455"], ["sign_in_count", 80], ["updated_at", "2015-10-08 02:45:14.288552"], ["id", 1]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mIdea Load (0.2ms)[0m  SELECT "ideas".* FROM "ideas"
+Completed 200 OK in 10ms (Views: 2.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/ideas" for 127.0.0.1 at 2015-10-07 21:45:36 -0500
+Processing by IdeasController#index as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2015-10-08 02:45:14.287455"], ["current_sign_in_at", "2015-10-08 02:45:36.654005"], ["sign_in_count", 81], ["updated_at", "2015-10-08 02:45:36.655381"], ["id", 1]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36mIdea Load (0.2ms)[0m  [1mSELECT "ideas".* FROM "ideas"[0m
+Completed 200 OK in 9ms (Views: 1.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/ideas" for 127.0.0.1 at 2015-10-07 21:45:36 -0500
+Processing by IdeasController#index as JSON
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2015-10-08 02:45:36.654005"], ["current_sign_in_at", "2015-10-08 02:45:36.695316"], ["sign_in_count", 82], ["updated_at", "2015-10-08 02:45:36.696612"], ["id", 1]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mIdea Load (0.3ms)[0m  SELECT "ideas".* FROM "ideas"
+Completed 200 OK in 10ms (Views: 1.5ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/ideas" for 127.0.0.1 at 2015-10-07 21:51:26 -0500
+Processing by IdeasController#index as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2015-10-08 02:45:36.695316"], ["current_sign_in_at", "2015-10-08 02:51:26.765836"], ["sign_in_count", 83], ["updated_at", "2015-10-08 02:51:26.767098"], ["id", 1]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36mIdea Load (0.2ms)[0m  [1mSELECT "ideas".* FROM "ideas"[0m
+Completed 200 OK in 9ms (Views: 1.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/ideas" for 127.0.0.1 at 2015-10-07 21:51:26 -0500
+Processing by IdeasController#index as JSON
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2015-10-08 02:51:26.765836"], ["current_sign_in_at", "2015-10-08 02:51:26.798006"], ["sign_in_count", 84], ["updated_at", "2015-10-08 02:51:26.799251"], ["id", 1]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mIdea Load (0.2ms)[0m  SELECT "ideas".* FROM "ideas"
+Completed 200 OK in 12ms (Views: 1.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/ideas" for 127.0.0.1 at 2015-10-07 21:52:35 -0500
+Processing by IdeasController#index as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2015-10-08 02:51:26.798006"], ["current_sign_in_at", "2015-10-08 02:52:35.327613"], ["sign_in_count", 85], ["updated_at", "2015-10-08 02:52:35.328946"], ["id", 1]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36mIdea Load (0.2ms)[0m  [1mSELECT "ideas".* FROM "ideas"[0m
+Completed 200 OK in 14ms (Views: 5.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/ideas" for 127.0.0.1 at 2015-10-07 21:52:35 -0500
+Processing by IdeasController#index as JSON
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2015-10-08 02:52:35.327613"], ["current_sign_in_at", "2015-10-08 02:52:35.360795"], ["sign_in_count", 86], ["updated_at", "2015-10-08 02:52:35.362026"], ["id", 1]]
+  [1m[36m (6.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mIdea Load (0.4ms)[0m  SELECT "ideas".* FROM "ideas"
+Completed 200 OK in 15ms (Views: 1.6ms | ActiveRecord: 7.2ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2015-10-07 21:54:08 -0500
+Processing by SessionsController#create as JSON
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "email"=>"user@example.com"}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "user@example.com"]]
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (2177.2ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2015-10-08 02:52:35.360795"], ["current_sign_in_at", "2015-10-08 02:54:08.869119"], ["current_sign_in_ip", "::1"], ["sign_in_count", 87], ["updated_at", "2015-10-08 02:54:08.871101"], ["id", 1]]
+  [1m[35m (5.9ms)[0m  commit transaction
+Completed 201 Created in 2412ms (Views: 0.2ms | ActiveRecord: 2183.6ms)
+
+
+Started GET "/ideas" for 127.0.0.1 at 2015-10-07 21:54:11 -0500
+Processing by IdeasController#index as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2015-10-08 02:54:08.869119"], ["current_sign_in_at", "2015-10-08 02:54:11.113679"], ["last_sign_in_ip", "::1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 88], ["updated_at", "2015-10-08 02:54:11.115366"], ["id", 1]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36mIdea Load (0.2ms)[0m  [1mSELECT "ideas".* FROM "ideas"[0m
+Completed 200 OK in 13ms (Views: 1.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/ideas" for 127.0.0.1 at 2015-10-07 21:54:11 -0500
+Processing by IdeasController#index as JSON
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2015-10-08 02:54:11.113679"], ["current_sign_in_at", "2015-10-08 02:54:11.154448"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 89], ["updated_at", "2015-10-08 02:54:11.156341"], ["id", 1]]
+  [1m[36m (3.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mIdea Load (0.3ms)[0m  SELECT "ideas".* FROM "ideas"
+Completed 200 OK in 24ms (Views: 1.6ms | ActiveRecord: 4.2ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2015-10-07 21:56:59 -0500
+Processing by SessionsController#create as JSON
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "email"=>"user@example.com"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "user@example.com"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2015-10-08 02:54:11.154448"], ["current_sign_in_at", "2015-10-08 02:56:59.890505"], ["current_sign_in_ip", "::1"], ["sign_in_count", 90], ["updated_at", "2015-10-08 02:56:59.893009"], ["id", 1]]
+  [1m[35m (1.4ms)[0m  commit transaction
+Completed 201 Created in 105ms (Views: 0.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/ideas" for 127.0.0.1 at 2015-10-07 21:56:59 -0500
+Processing by IdeasController#index as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2015-10-08 02:56:59.890505"], ["current_sign_in_at", "2015-10-08 02:56:59.946759"], ["last_sign_in_ip", "::1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 91], ["updated_at", "2015-10-08 02:56:59.947805"], ["id", 1]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36mIdea Load (0.2ms)[0m  [1mSELECT "ideas".* FROM "ideas"[0m
+Completed 200 OK in 10ms (Views: 0.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/ideas" for 127.0.0.1 at 2015-10-07 21:56:59 -0500
+Processing by IdeasController#index as JSON
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2015-10-08 02:56:59.946759"], ["current_sign_in_at", "2015-10-08 02:56:59.980357"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 92], ["updated_at", "2015-10-08 02:56:59.982420"], ["id", 1]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mIdea Load (1.7ms)[0m  SELECT "ideas".* FROM "ideas"
+Completed 200 OK in 13ms (Views: 1.0ms | ActiveRecord: 3.7ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2015-10-07 21:58:36 -0500
+Processing by SessionsController#create as JSON
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "email"=>"user@example.com"}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "user@example.com"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2015-10-08 02:56:59.980357"], ["current_sign_in_at", "2015-10-08 02:58:36.172831"], ["current_sign_in_ip", "::1"], ["sign_in_count", 93], ["updated_at", "2015-10-08 02:58:36.174320"], ["id", 1]]
+  [1m[35m (1.7ms)[0m  commit transaction
+Completed 201 Created in 118ms (Views: 0.2ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2015-10-07 22:01:59 -0500
+Processing by SessionsController#create as JSON
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "email"=>"user@example.com"}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "user@example.com"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2015-10-08 02:58:36.172831"], ["current_sign_in_at", "2015-10-08 03:01:59.846437"], ["last_sign_in_ip", "::1"], ["sign_in_count", 94], ["updated_at", "2015-10-08 03:01:59.848055"], ["id", 1]]
+  [1m[35m (1.4ms)[0m  commit transaction
+Completed 201 Created in 108ms (Views: 0.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/ideas" for 127.0.0.1 at 2015-10-07 22:02:04 -0500
+Processing by IdeasController#index as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2015-10-08 03:01:59.846437"], ["current_sign_in_at", "2015-10-08 03:02:04.325080"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 95], ["updated_at", "2015-10-08 03:02:04.326336"], ["id", 1]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36mIdea Load (0.2ms)[0m  [1mSELECT "ideas".* FROM "ideas"[0m
+Completed 200 OK in 9ms (Views: 1.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/ideas" for 127.0.0.1 at 2015-10-07 22:02:04 -0500
+Processing by IdeasController#index as JSON
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2015-10-08 03:02:04.325080"], ["current_sign_in_at", "2015-10-08 03:02:04.349074"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 96], ["updated_at", "2015-10-08 03:02:04.350376"], ["id", 1]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mIdea Load (0.2ms)[0m  SELECT "ideas".* FROM "ideas"
+Completed 200 OK in 18ms (Views: 0.9ms | ActiveRecord: 2.2ms)
