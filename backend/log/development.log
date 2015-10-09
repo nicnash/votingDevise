@@ -2754,3 +2754,34 @@ Completed 401 Unauthorized in 1ms
 Started POST "/users/sign_in" for ::1 at 2015-10-08 19:51:41 -0500
 Processing by SessionsController#create as JSON
 Completed 401 Unauthorized in 0ms
+
+
+Started POST "/users/sign_in" for ::1 at 2015-10-08 21:14:09 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#create as JSON
+  Parameters: {"user"=>{"identification"=>"user@example.com", "password"=>"[FILTERED]"}}
+Completed 401 Unauthorized in 24ms
+
+
+Started POST "/users/sign_in" for ::1 at 2015-10-08 21:15:13 -0500
+Processing by SessionsController#create as JSON
+  Parameters: {"user"=>{"identification"=>"user@example.com", "password"=>"[FILTERED]"}}
+Completed 401 Unauthorized in 1ms
+
+
+Started POST "/users/sign_in" for ::1 at 2015-10-08 21:15:33 -0500
+Processing by SessionsController#create as JSON
+  Parameters: {"user"=>{"identification"=>"user@example.com", "password"=>"[FILTERED]"}}
+Completed 401 Unauthorized in 0ms
+
+
+Started POST "/users/sign_in" for ::1 at 2015-10-08 21:17:15 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"user@example.com", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "user@example.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2015-10-09 00:51:23.308152"], ["current_sign_in_at", "2015-10-09 02:17:16.068140"], ["sign_in_count", 124], ["updated_at", "2015-10-09 02:17:16.069724"], ["id", 1]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+DEBUGGER34343434343
+Completed 201 Created in 212ms (Views: 0.3ms | ActiveRecord: 3.0ms)
