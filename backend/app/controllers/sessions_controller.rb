@@ -3,6 +3,7 @@ class SessionsController < Devise::SessionsController
 
   def create
     super do |user|
+      logger.debug "DEBUGGER34343434343"
       if request.format.json?
         data = {
           token: user.authentication_token,

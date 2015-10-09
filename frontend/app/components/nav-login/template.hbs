@@ -1,0 +1,8 @@
+{{input type="text" value=username placeholder="Enter Login"}}
+
+{{input type="password" value=password placeholder="Enter Password"}} 
+
+<button {{action 'authenticate' username password}}>Login</button>
+{{#if errorMessage}}
+  {{errorMessage}}
+{{/if}}
