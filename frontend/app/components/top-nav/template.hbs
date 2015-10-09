@@ -14,11 +14,16 @@
       <ul class="nav navbar-nav">
       	{{#link-to 'ideas' tagName="li"}}{{#link-to 'ideas' bubbles=false}}Ideas{{/link-to}}{{/link-to}}
       	{{#link-to 'ideas' tagName="li"}}{{#link-to 'ideas' bubbles=false}}Members{{/link-to}}{{/link-to}}
-      	{{#link-to 'ideas' tagName="li"}}{{#link-to 'ideas' bubbles=false}}About{{/link-to}}{{/link-to}}
+        {{#link-to 'ideas' tagName="li"}}{{#link-to 'ideas' bubbles=false}}About{{/link-to}}{{/link-to}}
+      	{{#link-to 'dashboard' tagName="li"}}{{#link-to 'dashboard' bubbles=false}}Dashboard{{/link-to}}{{/link-to}}
       </ul>
       <ul class="nav navbar-nav navbar-right">
       	{{username}}
-        <li>{{nav-login}}</li>
+        {{#unless session.isAuthenticated}}
+          <li>{{nav-login}}</li>
+        {{else}}
+          <li><a href="#" {{action 'logout'}}>Logout</a></li>
+        {{/unless}}
       </ul>
     </div><!--/.nav-collapse -->
   </div>
